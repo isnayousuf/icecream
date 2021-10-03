@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice cream</title>
+    <style>
+        .cream{
+            background: chocolate;
+            width: 200px;
+            height: 350px;
+            margin-left: 5rem;
+            margin-top: 2rem;
+            border-radius: 70% 70% 0 0;
+            position: relative;
+            animation: change 3s ease-in-out infinite alternate-reverse;
+            /* transition: all background 5s forwards linear ; */
+            
+        }
+        .cream::after{
+            content: '';
+            width: 3rem;
+            height: 16rem;
+            background-color: rgb(214, 169, 111);
+            position: absolute;
+            top: 90%;
+            left: 38%;
+            border-radius: 2rem;
+            z-index: -1;
+        }
+        @keyframes change{
+           
+            100%{
+                background: repeating-linear-gradient(-15deg, chocolate, chocolate 10px, wheat 15px, wheat 20px);
+            }
+        }
+     
+        
+    </style>
+</head>
+<body>
+    <div class="cream"></div>
+</body>
+</html>
